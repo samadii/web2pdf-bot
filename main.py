@@ -1,4 +1,5 @@
 import os, re
+import pyppdf
 from pyppeteer.errors import PageError, NetworkError, TimeoutError
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
