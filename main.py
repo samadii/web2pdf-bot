@@ -47,7 +47,7 @@ async def webtopdf(_, m):
     name = name.replace('/', '-') + '.pdf'
     msg = await m.reply("Processing..")
     try:
-        pyppdf.save_pdf(name, url)
+        await pyppdf.save_pdf(name, url)
     except PageError:
         return await msg.edit('URL could not be resolved.')
     except TimeoutError:
