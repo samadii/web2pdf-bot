@@ -1,0 +1,25 @@
+{
+    "name": "web2pdf-bot",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Your bot token",
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "Your telegram api hash",
+            "value": ""
+        },
+        "API_ID": {
+            "description": "Your telegram app id",
+            "value": ""
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "https://github.com/heroku/heroku-buildpack-google-chrome"
+        },
+        {
+            "url": "heroku/python"
+        }
+    ]
+}
