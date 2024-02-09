@@ -50,11 +50,11 @@ async def webtopdf(_, m):
     try:
         await pyppdf.save_pdf(name, url)
     except PageError:
-        return await msg.edit('URL could not be resolved.')
+        return await msg.edit_text('URL could not be resolved.')
     except TimeoutError:
-        return await msg.edit('Timeout.')
+        return await msg.edit_text('Timeout.')
     except NetworkError:
-        return await msg.edit('No access to the network.')
+        return await msg.edit_text('No access to the network.')
     await m.reply_document(name)
     await msg.delete()
     os.remove(name)
